@@ -71,7 +71,7 @@ export default function Hero() {
           </h1>
 
           <Link
-            href="/signin"
+            href="/signup"
             className="mt-6 flex h-[50px] w-[203px] items-center justify-between rounded-full bg-[#6428c4] px-5 text-[16px] font-semibold text-white transition-all duration-300 hover:bg-[#7636db] hover:shadow-[0_0_25px_rgba(125,55,220,0.45)]"
           >
             <span>Sign up now</span>
