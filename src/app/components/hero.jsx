@@ -45,7 +45,7 @@ const exchanges = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] ">
+    <section className="relative min-h-[calc(100vh-80px)] max-h-[1200px]">
 
       <Image
         src={hero_bg}
