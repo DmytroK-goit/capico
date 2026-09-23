@@ -11,6 +11,7 @@ import demo from "../../img/for_work/demo.png";
 import cloud from "../../img/for_work/cloud.png";
 import them from "../../img/for_work/them.png";
 import Image from "next/image";
+import { useState } from "react";
 
 const forWorkDb = [
   {
@@ -46,6 +47,7 @@ const forWorkDb = [
 ];
 
 export default function ForWork() {
+  const [progress, setProgress]= useState(0)
   return (
     <section className="bg-black px-6 py-16 md:px-10 lg:px-[108px]">
       <div className="mx-auto max-w-[1400px]">
@@ -70,6 +72,10 @@ export default function ForWork() {
           navigation={{
             prevEl: ".for-work-prev",
             nextEl: ".for-work-next",
+          }}
+          onProgress={(swiper, value) => {
+            setProgress(value);
+
           }}
           spaceBetween={14}
           slidesPerView={1.25}
@@ -105,7 +111,9 @@ export default function ForWork() {
         </Swiper>
 
         <div className="mt-7 h-[2px] w-full overflow-hidden bg-[#211a2f]">
-          <div className="h-full w-[30%] bg-[#7138e8]" />
+          <div className="h-full bg-[#7138e8] transition-[width] duration-200"
+            style={{width:`${Math.max(progress*100,20)}%`}}
+          />
         </div>
 
         <div className="mt-6 flex justify-end gap-3 md:hidden">
