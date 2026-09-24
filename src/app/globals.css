@@ -11,3 +11,20 @@ body {
   width: 1600px;
   margin: 0 auto;
 }
+.features-swiper .swiper-slide {
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.features-swiper .swiper-slide-prev,
+.features-swiper .swiper-slide-next {
+  opacity: 0.25;
+  transform: scale(0.9);
+}
+
+.features-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
