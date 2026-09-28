@@ -4,6 +4,7 @@ import Numbers from "./components/numbers";
 import Benefits from "./components/benefits";
 import ForWork from "./components/forWork";
 import Features from "./components/features";
+import Trade from "./components/trade";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Benefits />
       <ForWork />
       <Features />
+      <Trade />
     </>
   );
 }
