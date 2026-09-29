@@ -5,6 +5,7 @@ import Benefits from "./components/benefits";
 import ForWork from "./components/forWork";
 import Features from "./components/features";
 import Trade from "./components/trade";
+import HighSecurity from "./components/highSecurity";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ForWork />
       <Features />
       <Trade />
+      <HighSecurity />
     </>
   );
 }
