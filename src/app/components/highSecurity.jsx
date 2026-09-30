@@ -26,13 +26,14 @@ const securityDb = [
 
 export default function HighSecurity() {
   return (
-    <section className="px-3 py-12 md:px-6 lg:px-10">      <div className="relative mx-auto max-w-[1400px] rounded-[22px] bg-black px-6 py-8 md:min-h-[700px] md:px-12 md:py-10">
+    <section className="relative overflow-hidden bg-black px-6 py-2 text-white sm:px-6 lg:px-8">
+      {" "}
         <Image src={substruck} alt="" className="absolute top-0 z-1" />
-        <h2 className="relative z-2 max-w-[550px] text-[32px] font-normal leading-[0.95] tracking-[-2px] text-white md:text-[44px] mt-2 top-1">
+       <h2 className="text-[32px] font-normal leading-none tracking-[-1.5px] sm:text-[40px] ml-6">
           high security platform
         </h2>
 
-        <div className="relative z-10 mt-8 flex flex-col items-center md:mt-[-10px] md:flex-row md:items-center md:justify-between">
+        <div className="relative z-10 mt-8 flex flex-col items-center md:mt-[10px] md:flex-row md:items-center md:justify-between max-w-[80%] mx-auto">
           <div className="flex w-full justify-center md:w-[50%] md:justify-start">
             <Image src={security} alt="High security platform" className="w-[75%] max-w-[500px] object-contain md:w-[90%]" />
           </div>
@@ -51,7 +52,7 @@ export default function HighSecurity() {
             ))}
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }
