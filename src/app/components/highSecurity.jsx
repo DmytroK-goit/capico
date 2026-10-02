@@ -33,7 +33,7 @@ export default function HighSecurity() {
           high security platform
         </h2>
 
-        <div className="relative z-10 mt-8 flex flex-col items-center md:mt-[10px] md:flex-row md:items-center md:justify-between max-w-[80%] mx-auto">
+        <div className="relative z-10 mt-8 flex flex-col items-center md:mt-[10px] md:flex-row md:items-center md:justify-between max-w-[1400px] mx-auto">
           <div className="flex w-full justify-center md:w-[50%] md:justify-start">
             <Image src={security} alt="High security platform" className="w-[75%] max-w-[500px] object-contain md:w-[90%]" />
           </div>
