@@ -33,21 +33,21 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#partners"
+            href="/partners"
             className="text-[13px] text-white transition-opacity hover:opacity-60"
           >
             Partners
           </Link>
 
           <Link
-            href="#knowledge"
+            href="/knowledge"
             className="text-[13px] text-white transition-opacity hover:opacity-60"
           >
             Knowledge base
           </Link>
 
           <Link
-            href="#academy"
+            href="/academy"
             className="text-[13px] text-white transition-opacity hover:opacity-60"
           >
             Academy
