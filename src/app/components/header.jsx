@@ -26,7 +26,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#prices"
+            href="/prices"
             className="text-[13px] text-white transition-opacity hover:opacity-60"
           >
             Prices
