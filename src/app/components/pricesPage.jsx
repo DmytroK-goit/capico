@@ -27,46 +27,40 @@ const features = [
   },
 ];
 
-const plans=[
-{
-              name: "Month",
-              price: "$15",
-              detail: "",
-              economy: "Get started right now",
-              discount: "",
-            },
-            {
-              name: "3 months",
-              price: "$39",
-              detail: "$13/mo",
-              economy: "$6 economy",
-              discount: "-13%",
-            },
-            {
-              name: "6 months",
-              price: "$69",
-              detail: "$13/mo",
-              economy: "$21 economy",
-              discount: "-23%",
-            },
-            {
-              name: "Yearly subscribe",
-              price: "$119",
-              detail: "$9.9/mo",
-              economy: "$61 economy",
-              discount: "-33%",
-              featured: true,
-            }
-]
+const plans = [
+  {
+    name: "Month",
+    price: "$15",
+    detail: "",
+    economy: "Get started right now",
+    discount: "",
+  },
+  {
+    name: "3 months",
+    price: "$39",
+    detail: "$13/mo",
+    economy: "$6 economy",
+    discount: "-13%",
+  },
+  {
+    name: "6 months",
+    price: "$69",
+    detail: "$13/mo",
+    economy: "$21 economy",
+    discount: "-23%",
+  },
+  {
+    name: "Yearly subscribe",
+    price: "$119",
+    detail: "$9.9/mo",
+    economy: "$61 economy",
+    discount: "-33%",
+    featured: true,
+  },
+];
 export default function PricesPage() {
   return (
     <section className="relative isolate overflow-hidden bg-black px-5 pb-6 pt-6 text-white sm:px-8 md:min-h-[650px] md:px-10 md:pt-8">
-      <div
-        className="absolute pointer-events-none inset-0 -z-10 top-16"
-        style={{
-          background: "radial-gradient(ellipse at 90% 65%, rgba(110, 0, 180, 0.75) 0%, rgba(55, 0, 100, 0.38) 28%, transparent 58%)",
-        }}
-      />
       <Image src={bgPrices} alt="" aria-hidden="true" className="pointer-events-none absolute top-16 left-[20%] -z-10 w-[65%] max-w-[560px] object-contain opacity-90" />
 
       <h2 className="relative z-10 text-[44px] font-normal leading-none tracking-[-2px] sm:text-[56px] md:text-[68px]">Prices</h2>
@@ -74,7 +68,12 @@ export default function PricesPage() {
       {/* Main content */}
       <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
         <Image src={substruck} alt="" className="absolute top-0 z-1" />
-
+        <div
+          className="fixed pointer-events-none inset-0 -z-10 top-16 overflow-visible"
+          style={{
+            background: "radial-gradient(ellipse at 90% 65%, rgba(110, 0, 180, 0.75) 0%, rgba(55, 0, 100, 0.38) 28%, transparent 58%)",
+          }}
+        />
         <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
           <div className="max-w-[370px]">
             <h3 className="text-[34px] pl-4 font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
@@ -115,23 +114,22 @@ export default function PricesPage() {
               trial <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">period</span>
             </h3>
           </div>
-          <p className="mt-17 max-w-[540px] text-[26px] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center">When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate. </p>
+          
         </div>
+        <p className="mt-27 max-w-[740px] text-[28px] text-[#cdc2e1] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center mx-auto my-auto">When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate. </p>
       </div>
       {/* Subscription */}
 
       <div className="relative mt-8 overflow-hidden rounded-[26px] bg-gradient-to-r from-[#351477] via-[#4b2394] to-[#6845a5] px-5 pb-8 pt-6 sm:px-7 md:px-8 md:pb-6 w-full">
-     
         <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
 
-    
         <h3 className="relative z-10 pl-1 text-[34px] font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
           subscri
           <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">ption</span>
         </h3>
 
         <div className="relative z-10 mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {plans          .map((plan) => (
+          {plans.map((plan) => (
             <div key={plan.name} className={`flex min-h-[170px] flex-col justify-between rounded-[22px] p-4 sm:min-h-[173px] ${plan.featured ? "bg-gradient-to-br from-[#4000c9] to-[#a000f5]" : "bg-[#6546a5]/85"}`}>
               <p className="text-sm font-medium">{plan.name}</p>
 
@@ -150,7 +148,7 @@ export default function PricesPage() {
         </div>
 
         <p className="relative z-10 mt-10 max-w-[460px] text-[18px] font-light leading-[1.25] sm:text-[20px]">
-          You can subscribe and renew your subscription in
+          You can subscribe and renew your subscription in{" "}
           <a href="/account" className="text-[#a77aff] underline underline-offset-2 transition hover:text-white">
             your account
           </a>
