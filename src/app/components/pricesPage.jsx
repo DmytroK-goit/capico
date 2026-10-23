@@ -5,6 +5,10 @@ import virtual from "../../img/prices/virtual.png";
 import works from "../../img/prices/works.png";
 import account from "../../img/prices/accaunt.png";
 import Link from "next/link";
+import binance from '../../img/hero/binance.png'
+import ftx from '../../img/hero/ftx.png'
+import huobi from '../../img/hero/huobi.png'
+import okx from '../../img/hero/okx.png'
 
 const features = [
   {
@@ -58,6 +62,28 @@ const plans = [
     featured: true,
   },
 ];
+const exchanges = [
+  {
+    name: "BINANCE",
+    logo: binance,
+    href: "https://www.binance.com/",
+  },
+  {
+    name: "FTX",
+    logo: ftx,
+    href: "https://ftx.com/",
+  },
+  {
+    name: "Huobi",
+    logo: huobi,
+    href: "https://www.htx.com/",
+  },
+  {
+    name: "OKX",
+    logo: okx,
+    href: "https://www.okx.com/",
+  },
+];
 export default function PricesPage() {
   return (
     <section className="relative isolate overflow-hidden bg-black px-5 pb-6 pt-6 text-white sm:px-8 md:min-h-[650px] md:px-10 md:pt-8">
@@ -66,10 +92,10 @@ export default function PricesPage() {
       <h2 className="relative z-10 text-[44px] font-normal leading-none tracking-[-2px] sm:text-[56px] md:text-[68px]">Prices</h2>
 
       {/* Main content */}
-      <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
+      <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4 overflow-visible">
         <Image src={substruck} alt="" className="absolute top-0 z-1" />
         <div
-          className="fixed pointer-events-none inset-0 -z-10 top-16 overflow-visible"
+          className="absolute pointer-events-none inset-0 z-100 top-16 "
           style={{
             background: "radial-gradient(ellipse at 90% 65%, rgba(110, 0, 180, 0.75) 0%, rgba(55, 0, 100, 0.38) 28%, transparent 58%)",
           }}
@@ -105,7 +131,7 @@ export default function PricesPage() {
       </div>
 
       {/* Trial period */}
-      <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
+      <div className="relative mt-8 min-h-[500px] px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
         <Image src={substruck} alt="" className="absolute top-0 z-1" />
 
         <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
@@ -114,12 +140,13 @@ export default function PricesPage() {
               trial <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">period</span>
             </h3>
           </div>
-          
         </div>
-        <p className="mt-27 max-w-[740px] text-[28px] text-[#cdc2e1] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center mx-auto my-auto">When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate. </p>
+        <p className="mt-27 max-w-[740px] text-[28px] text-[#cdc2e1] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center mx-auto my-auto">
+          When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate.{" "}
+        </p>
       </div>
-      {/* Subscription */}
 
+      {/* Subscription */}
       <div className="relative mt-8 overflow-hidden rounded-[26px] bg-gradient-to-r from-[#351477] via-[#4b2394] to-[#6845a5] px-5 pb-8 pt-6 sm:px-7 md:px-8 md:pb-6 w-full">
         <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
 
@@ -149,17 +176,64 @@ export default function PricesPage() {
 
         <p className="relative z-10 mt-10 max-w-[460px] text-[18px] font-light leading-[1.25] sm:text-[20px]">
           You can subscribe and renew your subscription in{" "}
-          <a href="/account" className="text-[#a77aff] underline underline-offset-2 transition hover:text-white">
+          <Link href="/login" className="text-[#a77aff] underline underline-offset-2 transition hover:text-white">
             your account
-          </a>
+          </Link>
         </p>
 
         <p className="relative z-10 mt-8 text-center text-[10px] text-white/50">
           More details and payment instructions can be found in{" "}
-          <a href="/articles" className="underline underline-offset-2 transition hover:text-white">
+          <Link href="/articles" className="underline underline-offset-2 transition hover:text-white">
             this article
-          </a>
+          </Link>
         </p>
+      </div>
+       {/* Free use */}
+      <div className="relative isolate overflow-hidden  px-4 py-5 text-white sm:px-6">
+        {/* Purple glow */}
+          <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
+        <div className="pointer-events-none absolute -bottom-44 left-1/2 -z-10 h-[330px] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(112,39,255,0.85)_0%,rgba(77,30,178,0.5)_38%,rgba(23,17,50,0.2)_65%,transparent_78%)] blur-[32px]" />
+
+        <div className="relative z-10">
+          <h2 className="bg-gradient-to-r from-white to-[#c7b2ed] bg-clip-text text-[38px] font-medium leading-[1.15] tracking-[-2px] text-transparent sm:text-[50px] sm:tracking-[-2.5px]">free use</h2>
+
+          <p className="mx-auto my-10 max-w-[620px] text-center text-[13px] leading-[1.45] tracking-[-0.3px] text-[#c0b9cd] sm:my-[62px] sm:text-[14px]">
+            Capico provides free access to the platform through partnerships
+            <br className="hidden sm:block" /> with well-known cryptocurrency exchanges. There are no hidden fees
+            <br className="hidden sm:block" /> or functionality limitations.
+          </p>
+
+          <div className="flex flex-col gap-[18px]">
+            <p className="text-[11px] leading-[1.25] text-[#c0bac8]">
+              Click on the desired exchange and find
+              <br />
+              out the conditions for connecting to the
+              <br />
+              free plan:
+            </p>
+
+            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+              {exchanges.map((exchange) => (
+          <Link
+            key={exchange.name}
+            href={exchange.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-[58px] items-center justify-center gap-[5px] rounded-[14px] border border-transparent bg-[#100b18] px-2 text-[11px] font-bold text-[#f8f6fc] no-underline transition-all duration-300 hover:-translate-y-[3px] hover:border-[#aa75ff]/65 hover:bg-[#1b102d] sm:min-h-[64px] sm:rounded-[17px] sm:text-xs"
+          >
+            <Image
+              src={exchange.logo}
+              alt={`${exchange.name} logo`}
+              width={40}
+              height={40}
+              className="h-auto w-[50px] shrink-0 object-contain"
+            />
+          
+          </Link>
+        ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
