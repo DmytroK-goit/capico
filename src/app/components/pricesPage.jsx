@@ -5,10 +5,10 @@ import virtual from "../../img/prices/virtual.png";
 import works from "../../img/prices/works.png";
 import account from "../../img/prices/accaunt.png";
 import Link from "next/link";
-import binance from '../../img/hero/binance.png'
-import ftx from '../../img/hero/ftx.png'
-import huobi from '../../img/hero/huobi.png'
-import okx from '../../img/hero/okx.png'
+import binance from "../../img/hero/binance.png";
+import ftx from "../../img/hero/ftx.png";
+import huobi from "../../img/hero/huobi.png";
+import okx from "../../img/hero/okx.png";
 
 const features = [
   {
@@ -188,10 +188,10 @@ export default function PricesPage() {
           </Link>
         </p>
       </div>
-       {/* Free use */}
+      {/* Free use */}
       <div className="relative isolate overflow-hidden  px-4 py-5 text-white sm:px-6">
         {/* Purple glow */}
-          <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
+        <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
         <div className="pointer-events-none absolute -bottom-44 left-1/2 -z-10 h-[330px] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(112,39,255,0.85)_0%,rgba(77,30,178,0.5)_38%,rgba(23,17,50,0.2)_65%,transparent_78%)] blur-[32px]" />
 
         <div className="relative z-10">
@@ -214,23 +214,16 @@ export default function PricesPage() {
 
             <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
               {exchanges.map((exchange) => (
-          <Link
-            key={exchange.name}
-            href={exchange.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex min-h-[58px] items-center justify-center gap-[5px] rounded-[14px] border border-transparent bg-[#100b18] px-2 text-[11px] font-bold text-[#f8f6fc] no-underline transition-all duration-300 hover:-translate-y-[3px] hover:border-[#aa75ff]/65 hover:bg-[#1b102d] sm:min-h-[64px] sm:rounded-[17px] sm:text-xs"
-          >
-            <Image
-              src={exchange.logo}
-              alt={`${exchange.name} logo`}
-              width={40}
-              height={40}
-              className="h-auto w-[50px] shrink-0 object-contain"
-            />
-          
-          </Link>
-        ))}
+                <Link
+                  key={exchange.name}
+                  href={exchange.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-[58px] items-center justify-center gap-[5px] rounded-[14px] border border-transparent bg-[#100b18] px-2 text-[11px] font-bold text-[#f8f6fc] no-underline transition-all duration-300 hover:-translate-y-[3px] hover:border-[#aa75ff]/65 hover:bg-[#1b102d] sm:min-h-[64px] sm:rounded-[17px] sm:text-xs"
+                >
+                  <Image src={exchange.logo} alt={`${exchange.name} logo`} width={40} height={40} className="h-auto w-[50px] shrink-0 object-contain" />
+                </Link>
+              ))}
             </div>
           </div>
         </div>
