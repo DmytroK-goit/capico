@@ -86,64 +86,66 @@ const exchanges = [
 ];
 export default function PricesPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-black px-5 pb-6 pt-6 text-white sm:px-8 md:min-h-[650px] md:px-10 md:pt-8">
+    <section className="relative isolate overflow-hidden bg-black pb-6 pt-6 text-white  md:min-h-[650px]  md:pt-8 w-[1600px]">
       <Image src={bgPrices} alt="" aria-hidden="true" className="pointer-events-none absolute top-16 left-[20%] -z-10 w-[65%] max-w-[560px] object-contain opacity-90" />
 
       <h2 className="relative z-10 text-[44px] font-normal leading-none tracking-[-2px] sm:text-[56px] md:text-[68px]">Prices</h2>
-
-      {/* Main content */}
-      <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4 overflow-visible">
-        <Image src={substruck} alt="" className="absolute top-0 z-1" />
+      <div className="relative w-full">
         <div
-          className="absolute pointer-events-none inset-0 z-100 top-16 "
+          className="absolute pointer-events-none inset-0 z-100 top-4 "
           style={{
-            background: "radial-gradient(ellipse at 90% 65%, rgba(110, 0, 180, 0.75) 0%, rgba(55, 0, 100, 0.38) 28%, transparent 58%)",
+            background: "radial-gradient(ellipse at 90% 55%, rgba(110, 0, 180, 0.75) 0%, rgba(55, 0, 100, 0.38) 28%, transparent 58%)",
           }}
         />
-        <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
-          <div className="max-w-[370px]">
-            <h3 className="text-[34px] pl-4 font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
-              demo <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">account</span>
-            </h3>
+        {/* Main content */}
+        <div className="relative mt-8 min-h-[500px]  px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4 overflow-visible ">
+          <Image src={substruck} alt="" className="absolute top-0 z-1" />
 
-            <p className="mt-7 pl-6 max-w-[340px] text-[26px] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px]">
-              Available immediately <span className="bg-gradient-to-r from-[#c5a6f5] to-[#7134c8] bg-clip-text text-transparent">after registering with</span> Capico.
-            </p>
+          <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
+            <div className="max-w-[370px]">
+              <h3 className="text-[34px] pl-4 font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
+                demo <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">account</span>
+              </h3>
 
-            <Link href="#demo-account" className="mt-8 inline-flex items-center gap-3 text-lg font-medium text-[#a35cff] transition-colors hover:text-white border rounded-[20px] w-[200px] justify-center">
-              Read more
-              <span aria-hidden="true" className="text-2xl">
-                →
-              </span>
-            </Link>
-          </div>
+              <p className="mt-7 pl-6 max-w-[340px] text-[26px] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px]">
+                Available immediately <span className="bg-gradient-to-r from-[#c5a6f5] to-[#7134c8] bg-clip-text text-transparent">after registering with</span> Capico.
+              </p>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 md:pt-6">
-            {features.map((feature) => (
-              <article key={feature.alt} className={`relative flex min-h-[145px] flex-col justify-between overflow-hidden rounded-[24px] bg-[#0d0d12] p-5 sm:min-h-[155px] ${feature.className}`}>
-                <Image src={feature.image} alt={feature.alt} className="ml-auto h-[48px] w-[48px] object-contain sm:h-[54px] sm:w-[54px]" />
+              <Link href="#demo-account" className="mt-8 inline-flex items-center gap-3 text-lg font-medium text-[#a35cff] transition-colors hover:text-white border rounded-[20px] w-[200px] justify-center">
+                Read more
+                <span aria-hidden="true" className="text-2xl">
+                  →
+                </span>
+              </Link>
+            </div>
 
-                <p className="max-w-[190px] text-[11px] font-light leading-[1.25] text-white/85 sm:text-lg">{feature.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 md:pt-6">
+              {features.map((feature) => (
+                <article key={feature.alt} className={`relative flex min-h-[145px] flex-col justify-between overflow-hidden rounded-[24px] bg-[#0d0d12] p-5 sm:min-h-[155px] ${feature.className}`}>
+                  <Image src={feature.image} alt={feature.alt} className="ml-auto h-[48px] w-[48px] object-contain sm:h-[54px] sm:w-[54px]" />
 
-      {/* Trial period */}
-      <div className="relative mt-8 min-h-[500px] px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
-        <Image src={substruck} alt="" className="absolute top-0 z-1" />
-
-        <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
-          <div className="max-w-[370px]">
-            <h3 className="text-[34px] pl-4 font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
-              trial <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">period</span>
-            </h3>
+                  <p className="max-w-[190px] text-[11px] font-light leading-[1.25] text-white/85 sm:text-lg">{feature.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
-        <p className="mt-27 max-w-[740px] text-[28px] text-[#cdc2e1] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center mx-auto my-auto">
-          When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate.{" "}
-        </p>
+
+        {/* Trial period */}
+        <div className="relative mt-8 min-h-[500px] px-4 pb-10 pt-3 sm:px-6 md:mt-9 md:px-4">
+          <Image src={substruck} alt="" className="absolute top-0 z-1" />
+
+          <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-10">
+            <div className="max-w-[370px]">
+              <h3 className="text-[34px] pl-4 font-medium leading-tight tracking-[-1.5px] sm:text-[40px] md:text-[44px]">
+                trial <span className="bg-gradient-to-r from-white to-[#a879e9] bg-clip-text text-transparent">period</span>
+              </h3>
+            </div>
+          </div>
+          <p className="mt-27 max-w-[740px] text-[28px] text-[#cdc2e1] font-light leading-[1.16] tracking-[-0.7px] sm:text-[30px] text-center mx-auto my-auto">
+            When adding an API key from a real exchange, a 7-day trial period starts. Upon completion, you must have a paid subscription or continue working at a free rate.{" "}
+          </p>
+        </div>
       </div>
 
       {/* Subscription */}
@@ -188,23 +190,23 @@ export default function PricesPage() {
           </Link>
         </p>
       </div>
+
       {/* Free use */}
       <div className="relative isolate overflow-hidden  px-4 py-5 text-white sm:px-6">
-        {/* Purple glow */}
         <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
         <div className="pointer-events-none absolute -bottom-44 left-1/2 -z-10 h-[330px] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(112,39,255,0.85)_0%,rgba(77,30,178,0.5)_38%,rgba(23,17,50,0.2)_65%,transparent_78%)] blur-[32px]" />
 
         <div className="relative z-10">
           <h2 className="bg-gradient-to-r from-white to-[#c7b2ed] bg-clip-text text-[38px] font-medium leading-[1.15] tracking-[-2px] text-transparent sm:text-[50px] sm:tracking-[-2.5px]">free use</h2>
 
-          <p className="mx-auto my-10 max-w-[620px] text-center text-[13px] leading-[1.45] tracking-[-0.3px] text-[#c0b9cd] sm:my-[62px] sm:text-[14px]">
+          <p className="mx-auto my-10 max-w-[620px] text-center text-[13px] leading-[1.45] tracking-[-0.3px] text-[#c0b9cd] sm:my-[62px] sm:text-[24px]">
             Capico provides free access to the platform through partnerships
             <br className="hidden sm:block" /> with well-known cryptocurrency exchanges. There are no hidden fees
             <br className="hidden sm:block" /> or functionality limitations.
           </p>
 
           <div className="flex flex-col gap-[18px]">
-            <p className="text-[11px] leading-[1.25] text-[#c0bac8]">
+            <p className="text-[16px] leading-[1.25] text-[#c0bac8]">
               Click on the desired exchange and find
               <br />
               out the conditions for connecting to the
