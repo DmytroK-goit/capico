@@ -230,6 +230,55 @@ export default function PricesPage() {
           </div>
         </div>
       </div>
+      {/* Full access banner */}
+      <div className="relative isolate overflow-hidden rounded-[26px] bg-gradient-to-r from-[#6546a5] via-[#49218a] to-[#351477] px-6 py-10 text-center sm:px-10 sm:py-12 md:py-14">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_50%,rgba(145,85,255,0.35),transparent_70%)]" />
+
+        <div className="relative z-10 mx-auto max-w-[760px]">
+          <h3 className="text-[26px] font-light leading-[1.2] tracking-[-1px] text-white sm:text-[34px] md:text-[40px]">
+            Regardless of the use case of the
+            <br className="hidden sm:block" /> platform, you get full access to all
+            <br className="hidden sm:block" /> the features
+          </h3>
+
+          <p className="mx-auto mt-8 max-w-[760px] text-[9px] font-light leading-[1.45] text-white/70 sm:text-[10px]">
+            including horizontal volume indicator (VPVR), multi-chart mode on
+            <br className="hidden sm:block" /> one screen (Multichart), as well as the ability to connect up to 7 accounts of each exchange,
+            <br className="hidden sm:block" /> which is available from Capico. Need more limits? Send us an email: support@capico.app
+          </p>
+        </div>
+      </div>
+
+      {/* Free account CTA */}
+      <div className="relative isolate mt-8 min-h-[230px] overflow-hidden bg-black px-5 py-10 text-white sm:min-h-[260px] sm:px-8 md:py-12">
+        {/* Purple waves */}
+        <div className="pointer-events-none absolute -left-[10%] bottom-[-100px] -z-10 h-[230px] w-[85%] rotate-[-12deg] rounded-[50%] border-[3px] border-[#6938c9]/80 shadow-[0_-8px_25px_rgba(112,55,255,0.5)]" />
+
+        <div className="pointer-events-none absolute -left-[12%] bottom-[-125px] -z-10 h-[230px] w-[90%] rotate-[-8deg] rounded-[50%] border-[5px] border-[#49218a] shadow-[0_-5px_30px_rgba(135,65,255,0.65)]" />
+
+        <div className="pointer-events-none absolute -left-[15%] bottom-[-155px] -z-10 h-[250px] w-[95%] rotate-[-5deg] rounded-[50%] border-[2px] border-[#a66aff]/80" />
+
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_35%_100%,rgba(89,35,180,0.3),transparent_55%)]" />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex max-w-[650px] flex-col items-center gap-6 text-center">
+          <h2 className="text-[28px] font-light leading-tight tracking-[-1.2px] sm:text-[36px] md:text-[40px]">Try Capico for free per month</h2>
+
+          <Link href="/signup" className="group inline-flex min-w-[195px] items-center justify-between gap-5 rounded-full bg-[#6229c2] py-2 pl-7 pr-2 text-[13px] font-medium transition-all duration-300 hover:bg-[#8044e5] hover:shadow-[0_0_25px_rgba(112,55,255,0.5)]">
+            Create an account
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
+        </div>
+
+        {/* Floating crypto symbols */}
+        <div className="pointer-events-none absolute inset-0 -z-0 hidden md:block">
+          <span className="absolute bottom-[72px] left-[30%] flex h-11 w-11 items-center justify-center rounded-full border border-[#8152d7]/40 bg-[#170d30] text-xl text-[#a77aff] shadow-[0_0_18px_rgba(111,48,220,0.5)]">◈</span>
+
+          <span className="absolute bottom-[20px] left-[58%] flex h-12 w-12 items-center justify-center rounded-full border border-[#8152d7]/40 bg-[#170d30] text-2xl text-[#a77aff] shadow-[0_0_18px_rgba(111,48,220,0.5)]">₿</span>
+
+          <span className="absolute bottom-[15px] right-[23%] flex h-12 w-12 items-center justify-center rounded-full border border-[#8152d7]/40 bg-[#170d30] text-2xl text-[#a77aff] shadow-[0_0_18px_rgba(111,48,220,0.5)]">Ξ</span>
+        </div>
+      </div>
     </section>
   );
 }
