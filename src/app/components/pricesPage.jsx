@@ -86,7 +86,7 @@ const exchanges = [
 ];
 export default function PricesPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-black pb-6 pt-6 text-white  md:min-h-[650px]  md:pt-8 w-[1600px]">
+    <section className="relative isolate overflow-hidden bg-black  pt-6 text-white  md:min-h-[650px]  md:pt-8 w-[1600px]">
       <Image src={bgPrices} alt="" aria-hidden="true" className="pointer-events-none absolute top-16 left-[20%] -z-10 w-[65%] max-w-[560px] object-contain opacity-90" />
 
       <h2 className="relative z-10 text-[44px] font-normal leading-none tracking-[-2px] sm:text-[56px] md:text-[68px]">Prices</h2>
@@ -192,7 +192,7 @@ export default function PricesPage() {
       </div>
 
       {/* Free use */}
-      <div className="relative isolate overflow-hidden  px-4 py-5 text-white sm:px-6">
+      <div className="relative isolate overflow-hidden  px-4 py-9 text-white sm:px-6">
         <Image src={substruck} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-1 z-0 h-auto w-full" />
         <div className="pointer-events-none absolute -bottom-44 left-1/2 -z-10 h-[330px] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(112,39,255,0.85)_0%,rgba(77,30,178,0.5)_38%,rgba(23,17,50,0.2)_65%,transparent_78%)] blur-[32px]" />
 
@@ -231,7 +231,7 @@ export default function PricesPage() {
         </div>
       </div>
       {/* Full access banner */}
-      <div className="relative isolate overflow-hidden rounded-[26px] bg-gradient-to-r from-[#6546a5] via-[#49218a] to-[#351477] px-6 py-10 text-center sm:px-10 sm:py-12 md:py-14">
+      <div className="relative isolate overflow-hidden rounded-[26px] bg-gradient-to-r from-[#6546a5] via-[#49218a] to-[#351477] px-6 py-10 text-center sm:px-10 sm:py-12 md:py-30">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_50%,rgba(145,85,255,0.35),transparent_70%)]" />
 
         <div className="relative z-10 mx-auto max-w-[760px]">
@@ -250,7 +250,7 @@ export default function PricesPage() {
       </div>
 
       {/* Free account CTA */}
-      <div className="relative isolate mt-8 min-h-[230px] overflow-hidden bg-black px-5 py-10 text-white sm:min-h-[260px] sm:px-8 md:py-12">
+      <div className="relative isolate min-h-[230px] overflow-hidden bg-black px-5 py-10 text-white sm:min-h-[460px] sm:px-8 md:py-30">
         {/* Purple waves */}
         <div className="pointer-events-none absolute -left-[10%] bottom-[-100px] -z-10 h-[230px] w-[85%] rotate-[-12deg] rounded-[50%] border-[3px] border-[#6938c9]/80 shadow-[0_-8px_25px_rgba(112,55,255,0.5)]" />
 
@@ -261,12 +261,12 @@ export default function PricesPage() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_35%_100%,rgba(89,35,180,0.3),transparent_55%)]" />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex max-w-[650px] flex-col items-center gap-6 text-center">
+        <div className="relative z-10 mx-auto flex max-w-[650px] flex-col items-center justify-center gap-6 text-center">
           <h2 className="text-[28px] font-light leading-tight tracking-[-1.2px] sm:text-[36px] md:text-[40px]">Try Capico for free per month</h2>
 
           <Link href="/signup" className="group inline-flex min-w-[195px] items-center justify-between gap-5 rounded-full bg-[#6229c2] py-2 pl-7 pr-2 text-[13px] font-medium transition-all duration-300 hover:bg-[#8044e5] hover:shadow-[0_0_25px_rgba(112,55,255,0.5)]">
             Create an account
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <span className="flex h-9 w-10 items-center justify-center rounded-full text-xl transition-transform duration-300 ">→</span>
           </Link>
         </div>
 
