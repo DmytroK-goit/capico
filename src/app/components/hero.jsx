@@ -45,7 +45,7 @@ const exchanges = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] max-h-[1200px]">
+    <section className="relative min-h-[calc(50vh-80px)] max-h-[1200px]">
 
       <Image
         src={hero_bg}
@@ -82,7 +82,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-auto pb-0">
+        <div className="mt-[40%] pb-10">
           <p className="mb-5 max-w-[220px] text-[18px] font-semibold leading-[1.15] text-white">
             Trade for free on your
             <br />

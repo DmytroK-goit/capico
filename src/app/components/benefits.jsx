@@ -25,7 +25,7 @@ const statistics = [
 
 export default function Benefits() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black px-4 py-4 text-white sm:px-6 lg:px-8">
+    <section className="relative min-h-[calc(50vh-30px)] overflow-hidden bg-black px-4 py-4 text-white sm:px-6 lg:px-8">
     
       <Image
         src={substruck}
