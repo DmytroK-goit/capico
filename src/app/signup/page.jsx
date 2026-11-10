@@ -56,7 +56,7 @@ export default function Page() {
   };
 
   return (
-    <main className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-black px-4 py-10 text-white">
+    <main className="relative isolate flex h-[100%] items-center justify-center overflow-hidden bg-black px-4 py-10 text-white">
       <div className="pointer-events-none absolute -right-40 top-0 -z-10 h-[650px] w-[550px] rounded-full bg-[#6323c5]/20 blur-[150px]" />
 
       <div className="pointer-events-none absolute -bottom-60 left-1/3 -z-10 h-[500px] w-[500px] rounded-full bg-[#4c168e]/20 blur-[150px]" />
@@ -175,7 +175,7 @@ export default function Page() {
               <div className="mt-8 border-t border-white/[0.08] pt-7 text-center">
                 <p className="text-sm text-white/40">
                   Already have an account?{" "}
-                  <Link href="/login" className="font-medium text-[#a879e9] transition hover:text-white">
+                  <Link href="/signin" className="font-medium text-[#a879e9] transition hover:text-white">
                     Sign in
                   </Link>
                 </p>
@@ -183,7 +183,7 @@ export default function Page() {
             </div>
           </div>
 
-          <p className="mt-7 text-center text-[10px] tracking-wide text-white/25">© 2026 Capico. All rights reserved.</p>
+        
         </div>
       </div>
     </main>
