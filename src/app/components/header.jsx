@@ -19,7 +19,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 lg:flex">
           <Link
-            href="#features"
+            href="/features"
             className="text-[13px] text-white transition-opacity hover:opacity-60"
           >
             Features

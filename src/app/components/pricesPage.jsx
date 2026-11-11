@@ -260,7 +260,7 @@ export default function PricesPage() {
 
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_35%_100%,rgba(89,35,180,0.3),transparent_55%)]" />
 
-        {/* Content */}
+       
         <div className="relative z-10 mx-auto flex max-w-[650px] flex-col items-center justify-center gap-6 text-center">
           <h2 className="text-[28px] font-light leading-tight tracking-[-1.2px] sm:text-[36px] md:text-[40px]">Try Capico for free per month</h2>
 
@@ -270,7 +270,7 @@ export default function PricesPage() {
           </Link>
         </div>
 
-        {/* Floating crypto symbols */}
+      
         <div className="pointer-events-none absolute inset-0 -z-0 hidden md:block">
           <span className="absolute bottom-[72px] left-[30%] flex h-11 w-11 items-center justify-center rounded-full border border-[#8152d7]/40 bg-[#170d30] text-xl text-[#a77aff] shadow-[0_0_18px_rgba(111,48,220,0.5)]">◈</span>
 
